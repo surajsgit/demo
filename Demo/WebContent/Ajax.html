@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+<h1 id="aa">hi</h1>
+<button type="button" id="btn" onclick="loadDoc()">show</button>
+</div>
+<script type="text/javascript">
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+function loadDoc() {
+	alert("hhhh");
+	var xhttp=new XMLHttpRequest();
+	xhttp.onreadystatechange=function(){
+		if (this.readyState==4 && this.status==200) {
+			 document.getElementById("aa").innerHTML=this.responseText;
+			 alert("hi");
+		}
+	};
+	xhttp.open("GET", "suraj.txt", true);
+	xhttp.send();
+	}
+
+
+</script>
+</body>
+</html> 	
